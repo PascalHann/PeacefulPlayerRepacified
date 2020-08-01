@@ -13,6 +13,7 @@ public class PeacefulPlayer extends JavaPlugin {
             pluginManager.addPermission(perm.getPermission());
             pluginManager.registerEvents(perm.getListener(), this);
         }
+        System.out.println("Loaded PeacefulPlayer 1.0.3 successfully!");
     }
 
 }
