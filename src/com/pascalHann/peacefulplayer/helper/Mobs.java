@@ -24,6 +24,7 @@ public final class Mobs {
             EntityType.HUSK,
             EntityType.MAGMA_CUBE,
             EntityType.PHANTOM,
+            EntityType.PIGLIN,
             EntityType.PILLAGER,
             EntityType.RAVAGER,
             EntityType.SHULKER,
