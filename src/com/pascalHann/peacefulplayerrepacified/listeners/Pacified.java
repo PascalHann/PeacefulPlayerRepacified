@@ -1,7 +1,7 @@
-package com.pascalHann.peacefulplayer.listeners;
+package com.pascalHann.peacefulplayerrepacified.listeners;
 
-import com.pascalHann.peacefulplayer.permissions.Permissions;
-import com.pascalHann.peacefulplayer.helper.Mobs;
+import com.pascalHann.peacefulplayerrepacified.permissions.Permissions;
+import com.pascalHann.peacefulplayerrepacified.helper.Mobs;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
@@ -12,9 +12,11 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.projectiles.ProjectileSource;
 
+/**
+ * Cancel pacified player attempt to damage hostile mobs
+ */
 public class Pacified implements Listener {
 
-    //Cancel pacified player attempt to damage hostile mob
     @EventHandler
     public void onAttack(EntityDamageByEntityEvent attackEvent) {
         Entity attacker = attackEvent.getDamager();
@@ -24,7 +26,7 @@ public class Pacified implements Listener {
             attacker = (Player)((Projectile)attackEvent.getDamager()).getShooter();
         }
         Entity victim = attackEvent.getEntity();
-        if(attacker instanceof Player && attacker.hasPermission(Permissions.PACIFIED.getPermission()) && (Mobs.isHostile(victim) || Mobs.isNeutral(victim)) ) {
+        if(attacker instanceof Player && attacker.hasPermission(Permissions.PACIFIED.getPermission()) && (Mobs.isHostile(victim)) ) {
             attackEvent.setCancelled(true);
         }
     }
@@ -33,7 +35,7 @@ public class Pacified implements Listener {
     public void onLingeringPotionEffect(AreaEffectCloudApplyEvent areaEffectEvent) {
         ProjectileSource thrower = areaEffectEvent.getEntity().getSource();
         if(thrower instanceof Player && ((Player)thrower).hasPermission(Permissions.PACIFIED.getPermission())) {
-            areaEffectEvent.getAffectedEntities().removeIf(mob -> Mobs.isHostile(mob) || Mobs.isNeutral(mob));
+            areaEffectEvent.getAffectedEntities().removeIf(mob -> Mobs.isHostile(mob));
         }
     }
 
@@ -42,7 +44,7 @@ public class Pacified implements Listener {
         ProjectileSource thrower = splashEvent.getEntity().getShooter();
         if(thrower instanceof Player && ((Player)thrower).hasPermission(Permissions.PACIFIED.getPermission())) {
             splashEvent.getAffectedEntities().forEach(mob -> {
-                        if(Mobs.isHostile(mob) || Mobs.isNeutral(mob))
+                        if(Mobs.isHostile(mob))
                             splashEvent.setIntensity(mob, 0);
                     });
         }

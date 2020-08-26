@@ -1,10 +1,10 @@
-package com.pascalHann.peacefulplayer;
+package com.pascalHann.peacefulplayerrepacified;
 
-import com.pascalHann.peacefulplayer.permissions.Permissions;
+import com.pascalHann.peacefulplayerrepacified.permissions.Permissions;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class PeacefulPlayer extends JavaPlugin {
+public class PeacefulPlayerRepacified extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -13,7 +13,7 @@ public class PeacefulPlayer extends JavaPlugin {
             pluginManager.addPermission(perm.getPermission());
             pluginManager.registerEvents(perm.getListener(), this);
         }
-        System.out.println("Loaded PeacefulPlayer 1.0.3 successfully!");
+        System.out.println("Loaded PeacefulPlayerRepacified 2.0 successfully!");
     }
 
 }

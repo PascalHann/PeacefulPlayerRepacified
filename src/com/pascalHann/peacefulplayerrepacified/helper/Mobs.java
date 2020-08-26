@@ -1,4 +1,4 @@
-package com.pascalHann.peacefulplayer.helper;
+package com.pascalHann.peacefulplayerrepacified.helper;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -6,6 +6,9 @@ import org.bukkit.entity.EntityType;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Definition of hostile Mobs
+ */
 public final class Mobs {
 
     private static final List<EntityType> Hostiles = Arrays.asList(
@@ -25,6 +28,7 @@ public final class Mobs {
             EntityType.MAGMA_CUBE,
             EntityType.PHANTOM,
             EntityType.PIGLIN,
+            EntityType.PIGLIN_BRUTE,
             EntityType.PILLAGER,
             EntityType.RAVAGER,
             EntityType.SHULKER,
@@ -45,12 +49,6 @@ public final class Mobs {
             EntityType.ZOMBIE_VILLAGER
     );
 
-    private static final List<EntityType> Neutrals = Arrays.asList(
-            EntityType.IRON_GOLEM,
-            EntityType.LLAMA,
-            EntityType.WOLF
-    );
-
     private Mobs() { }
 
     public static boolean isHostile(EntityType entityType) {
@@ -59,14 +57,6 @@ public final class Mobs {
 
     public static boolean isHostile(Entity entity) {
         return isHostile(entity.getType());
-    }
-
-    public static boolean isNeutral(EntityType entityType) {
-        return Neutrals.contains(entityType);
-    }
-
-    public static boolean isNeutral(Entity entity) {
-        return isNeutral(entity.getType());
     }
 
 }

@@ -1,15 +1,17 @@
-package com.pascalHann.peacefulplayer.listeners;
+package com.pascalHann.peacefulplayerrepacified.listeners;
 
-import com.pascalHann.peacefulplayer.permissions.Permissions;
+import com.pascalHann.peacefulplayerrepacified.permissions.Permissions;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
+/**
+ * Cancel damage to a god player
+ */
 public class God implements Listener {
 
-    //Cancel damage to a god player
     @EventHandler
     public void onDamage(EntityDamageEvent damageEvent) {
         Entity victim = damageEvent.getEntity();

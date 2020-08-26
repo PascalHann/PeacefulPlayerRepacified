@@ -1,8 +1,8 @@
-package com.pascalHann.peacefulplayer.permissions;
+package com.pascalHann.peacefulplayerrepacified.permissions;
 
-import com.pascalHann.peacefulplayer.listeners.God;
-import com.pascalHann.peacefulplayer.listeners.Pacified;
-import com.pascalHann.peacefulplayer.listeners.Pacifier;
+import com.pascalHann.peacefulplayerrepacified.listeners.God;
+import com.pascalHann.peacefulplayerrepacified.listeners.Pacified;
+import com.pascalHann.peacefulplayerrepacified.listeners.Pacifier;
 import org.bukkit.event.Listener;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
