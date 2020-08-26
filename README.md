@@ -71,4 +71,4 @@ After a server restart the plugin should get listed when you run the /pl chatcom
 * ZOGLIN
 * ZOMBIE
 * ZOMBIFIED_PIGLIN
-* EntityType.ZOMBIE_VILLAGER
+* ZOMBIE_VILLAGER
