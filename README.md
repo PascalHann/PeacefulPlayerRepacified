@@ -22,9 +22,9 @@ After a server restart the plugin should get listed when you run the /pl chatcom
     If you want to enable the "true" peaceful experience you might also want to prevent the player from starving. You can
     do this with [Worldguard global region flags](https://worldguard.enginehub.org/en/latest/regions/global-region/):
         ````
-        /region flag \__global\__ -g members feed-delay 30
-        /region flag \__global\__ -g members feed-amount 20
-        /region addmember \__global\__ g:[yourPeacefulGroup]
+        /region flag __global__ -g members feed-delay 30
+        /region flag __global__ -g members feed-amount 20
+        /region addmember __global__ g:[yourPeacefulGroup]
         ````
     
 * peacefulplayer.pacified
