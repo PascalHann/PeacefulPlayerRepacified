@@ -24,7 +24,7 @@ After a server restart the plugin should get listed when you run the /pl chatcom
         ````
         /region flag \__global\__ -g members feed-delay 30
         /region flag \__global\__ -g members feed-amount 20
-        /region addmember g:[yourPeacefulGroup]
+        /region addmember \__global\__ g:[yourPeacefulGroup]
         ````
     
 * peacefulplayer.pacified
