@@ -13,7 +13,6 @@ public class PeacefulPlayerRepacified extends JavaPlugin {
             pluginManager.addPermission(perm.getPermission());
             pluginManager.registerEvents(perm.getListener(), this);
         }
-        System.out.println("Loaded PeacefulPlayerRepacified 2.0 successfully!");
     }
 
 }

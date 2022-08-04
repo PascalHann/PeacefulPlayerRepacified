@@ -64,6 +64,7 @@ After a server restart the plugin should get listed when you run the /pl chatcom
 * STRAY
 * VEX
 * VINDICATOR
+* WARDEN
 * WITCH
 * WITHER
 * WITHER_SKELETON

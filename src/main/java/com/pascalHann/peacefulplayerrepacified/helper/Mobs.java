@@ -39,6 +39,7 @@ public final class Mobs {
             EntityType.STRAY,
             EntityType.VEX,
             EntityType.VINDICATOR,
+            EntityType.WARDEN,
             EntityType.WITCH,
             EntityType.WITHER,
             EntityType.WITHER_SKELETON,
